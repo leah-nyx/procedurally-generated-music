@@ -53,8 +53,6 @@ external/
 build*/
 _build*/
 cmake-build*/
-builddir*/
-target*/
 
 # CMake
 CMakeUserPresets.json
