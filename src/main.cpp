@@ -28,7 +28,7 @@ int main(int argc, char** argv)
     });
 
     {
-        std::uint16_t      tick  = getRandomDuration();
+        std::uint16_t      tick  = getRandomDuration() * 280;
         std::uint8_t       track = 3; // magic number for now
         libremidi::message msg   = libremidi::channel_events::note_on(
             1, getRandomNote(), getRandomVelocity());
