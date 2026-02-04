@@ -58,3 +58,6 @@ CMakeUserPresets.json
 
 # Clangd
 .clangd
+
+# Where generated .mid files go
+midi/
