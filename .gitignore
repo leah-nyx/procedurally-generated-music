@@ -1,12 +1,3 @@
---
-# ignore external libraries
-lib/
-external/
-
-# -------------------------
-# everything in .gitignore
-# -------------------------
-
 # Prerequisites
 *.d
 
@@ -53,8 +44,6 @@ external/
 build*/
 _build*/
 cmake-build*/
-builddir*/
-target*/
 
 # CMake
 CMakeUserPresets.json
@@ -66,3 +55,6 @@ CMakeUserPresets.json
 
 # Mac
 .DS_Store
+
+# Clangd
+.clangd
