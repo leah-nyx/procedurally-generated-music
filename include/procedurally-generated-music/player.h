@@ -4,6 +4,8 @@
  * @see player.cpp
  */
 
+#pragma once
+
 #include <libremidi/writer.hpp>
 
 #include <cstdint>
@@ -15,12 +17,13 @@ namespace ProcGenMusic
     class Player
     {
     private:
-        libremidi::message msg;
-        libremidi::writer  writer;
+        libremidi::writer writer;
 
         std::ofstream output;
 
         std::uint8_t track;
+
+        std::string file;
 
     public:
         Player(std::string filename);

@@ -32,5 +32,9 @@ namespace ProcGenMusic
                 time + duration, track,
                 libremidi::channel_events::note_off(1, note, velocity)},
         });
+
+        std::ofstream output {file, std::ios::binary};
+        writer.write(output);
+        output.close();
     }
 } // namespace ProcGenMusic
