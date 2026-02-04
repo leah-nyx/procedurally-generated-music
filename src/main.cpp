@@ -1,6 +1,7 @@
 #include <libremidi/libremidi.hpp>
 #include <libremidi/writer.hpp>
 
+#include <cstdint>
 #include <fstream>
 #include <random>
 
@@ -26,15 +27,6 @@ int main(int argc, char** argv)
         libremidi::track_event {140, 0,
                                 libremidi::channel_events::note_off(1, 45, 0)},
     });
-
-    {
-        std::uint16_t      tick  = getRandomDuration() * 280;
-        std::uint8_t       track = 3; // magic number for now
-        libremidi::message msg   = libremidi::channel_events::note_on(
-            1, getRandomNote(), getRandomVelocity());
-
-        writer.add_event(tick, track, msg);
-    }
 
     std::ofstream output {"midi/output.mid", std::ios::binary};
     writer.write(output);

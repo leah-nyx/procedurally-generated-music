@@ -8,6 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(${PROJECT_NAME}
     src/chords.cpp
     src/main.cpp
+    src/player.cpp
 )
 
 add_subdirectory(external/libremidi/)
